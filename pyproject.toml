@@ -1,0 +1,24 @@
+[project]
+name = "d2l-pytorch-my"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10,<3.12"
+dependencies = [
+    "pandas>=2.3.3",
+    "torch==2.7.0+cu128",
+    "torchvision==0.22.0+cu128",
+]
+
+[[tool.uv.index]]
+url = "https://mirrors.aliyun.com/pypi/simple"
+default = true
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true   # 只有显式指定的包才从这个索引装，避免依赖混淆
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }

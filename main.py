@@ -1,0 +1,11 @@
+import torch
+
+print("torch版本:", torch.__version__)
+print("CUDA可用:", torch.cuda.is_available())
+
+if torch.cuda.is_available():
+    print("CUDA版本:", torch.version.cuda)
+    print("GPU数量:", torch.cuda.device_count())
+    print("当前设备:", torch.cuda.get_device_name(0))
+else:
+    print("未检测到CUDA（只能使用CPU）")
