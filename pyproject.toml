@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10,<3.12"
 dependencies = [
+    "ipykernel>=7.3.0",
     "matplotlib>=3.10.9",
     "pandas>=2.3.3",
     "torch==2.7.0+cu128",
@@ -12,7 +13,7 @@ dependencies = [
 ]
 
 [[tool.uv.index]]
-url = "https://mirrors.aliyun.com/pypi/simple"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
 default = true
 
 [[tool.uv.index]]
